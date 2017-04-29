@@ -1,0 +1,80 @@
+.popup 
+	background-color: #fff
+	position: fixed
+	top: calc(50% - 242px)
+	left: calc(50% - 400px)
+	display: flex
+	align-items: stretch
+
+	&__content
+		background-color: #F5F7FA
+		padding: 50px 40px
+		&_title
+			padding-bottom: 24px
+			
+		&_text
+			width: 320px
+			font-size: 14px
+			line-height: 20px
+			
+	
+
+	&__background 
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		display: none
+		background: rgba(90, 104, 114, 0.5)
+	
+
+	&__form 
+		display: flex
+		flex-direction: column
+		padding: 40px 10px 50px 45px
+	
+
+	&__select 
+		margin: 16px 0 20px
+	
+
+	&__nav
+		display: flex
+	
+
+	&__checkbox
+		&_main-label
+			font-size: 14px
+			padding-bottom: 35px
+		
+
+		&-block
+			display: flex
+			padding-top: 10px
+		
+
+		&_label
+			margin-right: 12px
+			
+
+	&__input
+		margin-bottom: 20px
+		height: 41px
+		padding: 0 15px
+	
+
+	&__btn
+		margin-top: 20px
+		border-radius: 2px
+		padding: 10px 93px
+	
+
+	&__close
+		padding: 7px 16px 0 0
+		
+
+
+
+#openPopup:target
+	display: block

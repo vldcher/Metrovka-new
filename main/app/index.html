@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Metrovka</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon-metrovka.png" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
+
+</head>
+
+<body>
+	
+	<!-- **********************Header section START***********************-->
+	<header class="page-header">
+		<div class="page-header__center">
+			
+			<div class="page-header__center__nav-log">
+				<nav class="page-header__center__nav-log__nav">
+					<a href="#" class="page-header__center__nav-log__nav__logo"><img src="img/logo.png" alt="img"/></a>
+					<a href="rent/app/rent.html" class="page-header__center__nav-log__nav__item item">Аренда</a>
+					<a href="#" class="page-header__center__nav-log__nav__item item">Продажа</a>
+					<a href="#" class="page-header__center__nav-log__nav__item item">Посуточно</a>
+					<a href="#" class="page-header__center__nav-log__nav__item item"><span class="dots"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></span>Еще</a>
+				</nav>
+				<div class="page-header__center__nav-log__log">
+					<a href="#" class="page-header__center__nav-log__log__place-advert"><i class="fa fa-plus-circle"></i><b>Разместить объявление</b></a>
+					<a href="#" class="page-header__center__nav-log__log__log-in">Войти</a>
+					<!-- <a href="#" class="page-header__center__nav-log__log__hamburger hamburger hamburger--collapse" style="display: none;">
+						<span class="page-header__center__nav-log__log__hamburger__hamburger-box hamburger-box">
+							<span class="page-header__center__nav-log__log__hamburger__hamburger-box__hamburger-inner hamburger-inner"></span>
+						</span>
+					</a> -->
+					<a href="#openMenu" class="openMenu-link"><img src="img/menu.png" alt="menu"></a>
+
+
+					<div id="openMenu" class="header__openMenu">
+						<div class="menu__container">
+							<a href="#" class="header__logo menu__logo"><img alt="logo" src="img/logo.png"></a>
+							<nav class="nav menu__nav">
+								<ul class="menu__nav-list">
+									<li><a class="nav__item nav__item-white" href="#" > Аренда</a></li>
+									<li><a class="nav__item nav__item-white" href="#" > Продажа</a></li>
+									<li><a class="nav__item nav__item-white" href="#" > Посуточно</a></li>
+									<li><a class="nav__item nav__item-white" href="#" > Блог</a></li>
+									<li><a class="nav__item nav__item-white" href="#" > Контакты</a></li>
+									<li><a class="nav__item nav__item-white" href="#" > Новый поиск</a></li>
+									<li><a class="nav__item nav__item-white nav__post" href="#"><i class="fa fa-plus-circle"></i> Разместить объявление</a></li>
+									<li><a class="nav__item nav__item-white" href="#">Войти</a></li>
+								</ul>
+							</nav>
+						</div>
+						<a href="#closeMenu" class="closeMenu-link"><img src="img/mob-cancel.png" alt="menu"></a>
+					</div>
+
+				</div>	
+			</div>
+
+			<h1 class="page-header__center__big-text">Поиск недвижимости в Украине</h1>
+			
+			<form class="page-header__center__form">
+
+				<div class="page-header__center__form__select-city">	
+					<span class="page-header__center__form__select-city__text">Выберите город</span>
+					<div class="dropdown">
+						<button class="btn btn-primary dropdown-toggle page-header__center__form__select-city__selection" type="button" data-toggle="dropdown">Киев
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Киев</a></li>
+							<li><a href="#">Ровно</a></li>
+							<li><a href="#">Донецк</a></li>
+							<li><a href="#">Севастополь</a></li>
+							<li><a href="#">Одесса</a></li>
+						</ul>
+					</div>
+				</div>	
+				
+				<div class="page-header__center__form__room">
+					<span class="page-header__center__form__room__text">Кол-во комнат</span>
+
+					<button type="button" class="page-header__center__form__room__rooms-amount">1</button>
+					<button type="button" class="page-header__center__form__room__rooms-amount">2</button>
+					<button type="button" class="page-header__center__form__room__rooms-amount">3</button>
+					<button type="button" class="page-header__center__form__room__rooms-amount">4</button>
+					<button type="button" class="page-header__center__form__room__rooms-amount">5+</button>
+
+
+				<!-- 	<label class="popup__checkbox_label">
+						<input type="checkbox" name="room1">
+						<span class="checkbox-span checkbox_span-green active">1</span>
+					</label>
+					<label class="popup__checkbox_label">
+						<input type="checkbox" name="room2">
+						<span class="checkbox-span checkbox_span-green active">2</span>
+					</label>
+					<label class="popup__checkbox_label">
+						<input type="checkbox" name="room3">
+						<span class="checkbox-span checkbox_span-green">3</span>
+					</label>
+					<label class="popup__checkbox_label">
+						<input type="checkbox" name="room4">
+						<span class="checkbox-span checkbox_span-green">4</span>
+					</label>
+					<label class="popup__checkbox_label">
+						<input type="checkbox" name="room5">
+						<span class="checkbox-span checkbox_span-green">5+</span>
+					</label> -->
+
+				</div>
+				
+				<button class="page-header__center__form__submit">Перейти к поиску</button>
+			</form>	
+		</div>
+	</header>
+	<!-- **********************Header section END***********************-->
+	
+
+	<!-- **********************Main section START***********************-->
+	<main class="main">
+		
+		<div class="main__property">
+
+			<div class="main__property__content">	
+				<h2 class="main__property__content__big-text">Недвижимость возле метро</h2>
+				<div class="main__property__content__place-type">	
+					<a href="#" class="main__property__content__place-type__item accent-text">Квартиры</a>
+					<a href="#" class="main__property__content__place-type__item accent-text">Дома</a>
+					<a href="#" class="main__property__content__place-type__item accent-text">Офисы</a>
+				</div>
+				<form class="main__property__content__form">
+					<div class="dropdown">
+						<button class="btn btn-primary dropdown-toggle main__property__content__form__selection" type="button" data-toggle="dropdown"><i class="fa fa-circle"></i>Политехнический институт
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Политехнический институт</a></li>
+							<li><a href="#">Универститет</a></li>
+							<li><a href="#">Житомирская</a></li>
+							<li><a href="#">Хрещатик</a></li>
+							<li><a href="#">Святошин</a></li>
+						</ul>
+					</div>
+					<button type="submit" class="main__property__content__form__submit button_primary">Показать результаты поиска</button>	
+				</form>
+			</div>
+			<div class="main__property__pic">
+				<img class="main__property__pic__metro" src="img/metro.jpg" alt="metro">
+			</div>	
+		</div>
+		
+		<!-- **********************main__best section START***********************-->
+		<div class="main__best">
+			<h2 class="main__best__big-text">Лучшие предложения в Киеве</h2>
+			
+			<div class="main__best__slider">
+				<a href="#" class="main__best__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
+					<img src="img/Group-10.jpg" alt="img" class="main__best__slider__item__img"/>
+					<p class="main__best__slider__item__price">7 800 грн <i class="fa fa-check-circle"></i></p>
+					<span class="main__best__slider__item__info">2 комн. <i class="fa fa-circle"></i> 30 кв.м.</span>
+					<h5 class="main__best__slider__item__loc"><i class="fa fa-circle"></i>Политехнический институт </h5>
+				</a>
+				<a href="#" class="main__best__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
+					<img src="img/Group-10.jpg" alt="img" class="main__best__slider__item__img"/>
+					<p class="main__best__slider__item__price">10 200 грн <i class="fa fa-check-circle"></i></p>
+					<span class="main__best__slider__item__info">1 комн. <i class="fa fa-circle"></i> 30 кв.м.</span>
+					<h5 class="main__best__slider__item__loc"><i class="fa fa-circle fa-red"></i>Политехнический институт</h5>
+				</a>
+				<a href="#" class="main__best__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
+					<img src="img/Group-10.jpg" alt="img" class="main__best__slider__item__img"/>
+					<p class="main__best__slider__item__price">6 900 грн <i class="fa fa-check-circle"></i></p>
+					<span class="main__best__slider__item__info">2 комн. <i class="fa fa-circle"></i> 30 кв.м.</span>
+					<h5 class="main__best__slider__item__loc"><i class="fa fa-circle fa-red"></i>Политехнический институт</h5>
+				</a>
+				<a href="#" class="main__best__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
+					<img src="img/Group-10.jpg" alt="img" class="main__best__slider__item__img"/>
+					<p class="main__best__slider__item__price">9 000 грн <i class="fa fa-check-circle"></i></p>
+					<span class="main__best__slider__item__info">2 комн. <i class="fa fa-circle"></i> 30 кв.м.</span>
+					<h5 class="main__best__slider__item__loc"><i class="fa fa-circle fa-red"></i>Политехнический институт</h5>
+				</a>
+				<a href="#" class="main__best__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
+					<img src="img/Group-10.jpg" alt="img" class="main__best__slider__item__img"/>
+					<p class="main__best__slider__item__price">9 000 грн <i class="fa fa-check-circle"></i></p>
+					<span class="main__best__slider__item__info">2 комн. <i class="fa fa-circle"></i> 30 кв.м.</span>
+					<h5 class="main__best__slider__item__loc"><i class="fa fa-circle fa-red"></i>Политехнический институт</h5>
+				</a>
+				<div class="main__best__slider__nav">
+					<div class="main__best__slider__nav__left">
+						<i class="fa fa-angle-left" aria-hidden="true"></i>
+					</div>
+					<div class="main__best__slider__nav__right">
+						<i class="fa fa-angle-right" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+			
+			<a href="#" class="main__best__prices">Смотреть лучшие ценовые прелдожения</a>
+		</div>
+		<!-- **********************main__best section END***********************-->
+
+		<!-- **********************main__advert section START***********************-->
+		<div class="main__advert">
+			<h2 class="main__advert__big-text">Последние объявления в Киеве</h2>
+			
+			<div class="main__advert__type">
+				<a href="#" class="main__advert__type__item accent-text">Квартиры</a>
+				<a href="#" class="main__advert__type__item accent-text">Дома</a>
+				<a href="#" class="main__advert__type__item accent-text">Офисы</a>
+			</div>
+			
+			<div class="main__advert__slider">
+				<a href="#" class="main__advert__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
+					<img src="img/flat_1.png" alt="img" class="main__advert__slider__item__img"/>
+					<p class="main__advert__slider__item__price">11 800 грн <i class="fa fa-check-circle"></i></p>
+					<span class="main__advert__slider__item__info">2 комн. <i class="fa fa-circle"></i> 48 кв.м.</span>
+					<h5 class="main__advert__slider__item__loc"><i class="fa fa-circle fa-red"></i>Политехнический интститут</h5>
+				</a>
+				<a href="#" class="main__advert__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
+					<img src="img/flat_2.png" alt="img" class="main__advert__slider__item__img"/>
+					<p class="main__advert__slider__item__price">15 000 грн <i class="fa fa-check-circle"></i></p>
+					<span class="main__advert__slider__item__info">3 комн. <i class="fa fa-circle"></i> 100 кв.м.</span>
+					<h5 class="main__advert__slider__item__loc"><i class="fa fa-circle fa-red"></i>Шулявская</h5>
+				</a>
+				<a href="#" class="main__advert__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
+					<img src="img/flat_3.png" alt="img" class="main__advert__slider__item__img"/>
+					<p class="main__advert__slider__item__price">11 800 грн <i class="fa fa-check-circle"></i><i class="fa fa-check-circle"></i></p>
+					<span class="main__advert__slider__item__info">1 комн. <i class="fa fa-circle"></i> 30 кв.м.</span>
+					<h5 class="main__advert__slider__item__loc"><i class="fa fa-circle fa-blue"></i>Контрактовая площадь</h5>
+				</a>
+				<a href="#" class="main__advert__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
+					<img src="img/flat_4.png" alt="img" class="main__advert__slider__item__img"/>
+					<p class="main__advert__slider__item__price">7 000 грн <i class="fa fa-check-circle"></i></p>
+					<span class="main__advert__slider__item__info">2 комн. <i class="fa fa-circle"></i> 40 кв.м.</span>
+					<h5 class="main__advert__slider__item__loc">просп. Победы, 18А</h5>
+				</a>
+				<a href="#" class="main__advert__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
+					<img src="img/flat_4.png" alt="img" class="main__advert__slider__item__img"/>
+					<p class="main__advert__slider__item__price">7 000 грн <i class="fa fa-check-circle"></i></p>
+					<span class="main__advert__slider__item__info">2 комн. <i class="fa fa-circle"></i> 40 кв.м.</span>
+					<h5 class="main__advert__slider__item__loc">просп. Победы, 18А</h5>
+				</a>
+				<div class="main__advert__slider__nav">
+					<div class="main__advert__slider__nav__left">
+						<i class="fa fa-angle-left" aria-hidden="true"></i>
+					</div>
+					<div class="main__advert__slider__nav__right">
+						<i class="fa fa-angle-right" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+			
+			<a href="#" class="main__advert__fresh">Смотреть самые свежие объявления</a>
+		</div>
+		<!-- **********************main__advert section END***********************-->
+		
+		<!-- **********************main__social section START***********************-->
+		<div class="main__social">
+			<h2 class="main__social__big-text">Общайтесь в Telegram</h2>
+			<p class="main__social__small-text">Не отвлекайтесь больше на формальности. Получайте моментальные уведомления о новых объявлениях, общайтесь без ограничений.</p>
+			<div class="main__social__option">
+				<a href="#" class="main__social__option__item accent-text">Поиск недвижимости</a>
+				<a href="#" class="main__social__option__item accent-text">Общение с клиентами</a>
+			</div>
+			
+			<div class="main__social__slider">
+				<div class="main__social__slider__item">
+					<img src="img/Group-19.png" alt="img" class="main__social__slider__item__phone" />
+					<div class="main__social__slider__item__telegram">
+						<h2 class="main__social__slider__item__telegram__name">Telegram</h2>
+						<h2 class="main__social__slider__item__telegram__big-text">Metrovka Bot</h2>
+						<ol class="main__social__slider__item__telegram__ol">
+							<li class="main__social__slider__item__telegram__ol__item">Собирайте аналитику по обьектам</li>
+							<li class="main__social__slider__item__telegram__ol__item">Получайте подсказки по эффективному продвижению объявлений</li>
+							<li class="main__social__slider__item__telegram__ol__item">Общайтесь с клиентами через специальный канал телекоммуникации</li>
+						</ol>
+						<a href="#" class="main__social__slider__item__telegram__join button_primary">Присоедениться в Telegram</a>
+					</div>
+				</div>
+				<div class="main__social__slider__flags">
+					<i class="fa fa-circle"></i>
+					<i class="fa fa-circle"></i>
+				</div>
+			</div>
+
+		</div>
+		<!-- **********************main__social section END***********************-->
+
+		<!-- **********************main__blog section START***********************-->
+		<div class="main__blog">
+			<h2 class="main__blog__big-text">Блог Metrovka</h2>
+			<p class="main__blog__small-text">Хитрости, приемы, советы, фото и видео - все о том как продать, купить, сдать в аренду или арендовать недвижимость</p>
+
+			<div class="main__blog__slider">
+				<a href="#" class="main__blog__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
+					<img src="img/Group10.jpg" alt="img" class="main__blog__slider__item__img"/>
+					<span class="main__blog__slider__item__rubric pink_item">ЛАЙФХАК</span>
+					<h5 class="main__blog__slider__item__article">Киевляне могут оплатить коммуналку через Facebook...</h5>
+					<p class="main__blog__slider__item__author">Татьяна Малыняк <i class="fa fa-circle"></i> 5 мин чтения</p>
+				</a>
+				<a href="#" class="main__blog__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
+					<img src="img/advice.png" alt="img" class="main__blog__slider__item__img"/>
+					<span class="main__blog__slider__item__rubric green_item">СОВЕТЫ METROVKA</span>
+					<h5 class="main__blog__slider__item__article">ТОП-5 Самых дешевых квартир Киева</h5>
+					<p class="main__blog__slider__item__author">Татьяна Малыняк <i class="fa fa-circle"></i> 4 мин чтения</p>
+				</a>
+				<a href="#" class="main__blog__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
+					<img src="img/technologies.png" alt="img" class="main__blog__slider__item__img"/>
+					<span class="main__blog__slider__item__rubric blue_item">ТЕХНОЛОГИИ</span>
+					<h5 class="main__blog__slider__item__article">Смарт квартиры: цены, предложения и законность</h5>
+					<p class="main__blog__slider__item__author">Татьяна Малыняк <i class="fa fa-circle"></i> 2 мин чтения</p>
+				</a>
+			</div>
+			
+			<a href="#" class="main__blog__page">Перейти на страницу блога</a>
+		</div>
+		<!-- **********************main__blog section END***********************-->
+
+
+	</main>
+	<!-- **********************Main section END***********************-->
+	
+
+	<footer class="page-footer">
+		<div class="page-footer__metrovka">
+			<h4 class="page-footer__metrovka__name">Metrovka</h4>
+			<a href="#" class="page-footer__metrovka__item">О компании</a>
+			<a href="#" class="page-footer__metrovka__item">Пресса о нас</a>
+			<a href="#" class="page-footer__metrovka__item">Пользовательское соглашение</a>
+			<a href="#" class="page-footer__metrovka__item">Карта сайта</a>
+			<a href="#" class="page-footer__metrovka__item">Помощь</a>
+		</div>
+		<div class="page-footer__partnership">
+			<h4 class="page-footer__partnership__name">Партнерство</h4>
+			<a href="#" class="page-footer__partnership__item">Как разместить обьявление</a>
+			<a href="#" class="page-footer__partnership__item">Инструменты продвижения</a>
+			<a href="#" class="page-footer__partnership__item">Правила заполнения объявлений</a>
+		</div>
+		<div class="page-footer__know-more">
+			<h4 class="page-footer__know-more__name">Узнать больше</h4>
+			<a href="#" class="page-footer__know-more__item">Бонусная программа Bonus+</a>
+			<a href="#" class="page-footer__know-more__item">Telegram Metrovka Bot</a>
+			<a href="#" class="page-footer__know-more__item">Как работает поиск</a>
+			<a href="#" class="page-footer__know-more__item">Как пользоваться избранным</a>
+		</div>
+		<div class="page-footer__contacts">
+			<h4 class="page-footer__contacts__name">Контакты</h4>
+			<div class="page-footer__contacts__item">
+				<a href="#" class="page-footer__contacts__item__icon">
+					<i class="fa fa-facebook"></i>
+				</a>
+				<a href="#" class="page-footer__contacts__item__icon">
+					<i class="fa fa-vk"></i>
+				</a>
+				<a href="#" class="page-footer__contacts__item__icon">
+					<i class="fa fa-instagram"></i>
+				</a>	
+			</div>
+			<a href="#" class="page-footer__contacts__item page-footer__contacts__item_special-margin">ул.Жилянская, 37 <br /><span>Киев 01033</span></a>
+			<a href="#" class="page-footer__contacts__item">info@metrovka.ua</a>
+			<a href="#openPopup" class="page-footer__contacts__button button_primary">Оставить заявку</a>
+		</div>
+		
+		<a href="#" class="page-footer__logo"><img src="img/footer-logo.png" alt="img"></a>
+
+		<div class="popup__background" id="openPopup">
+			<div class="popup">
+				<div class="popup__content">
+					<h4 class="popup__content_title section-title">Оставить заявку</h4f>
+						<p class="popup__content_text">Нет времени искать по сайту?<br>
+							Заполняй критерии поиска и получай акутальные объявления как только они появляются на Metrovka.</p>
+						</div>
+						<form class="popup__form">
+							<ul class="popup__nav nav__popup">
+								<li><a class="main__advert__type__item accent-text" href="#">Район</a></li>
+								<li><a class="main__advert__type__item accent-text" href="#">Метро</a></li>
+							</ul>
+							<select class="popup__select select">
+								<option class="select-options">Соломенский</option>
+								<option class="select-options">Дарницкий</option>
+								<option class="select-options">Печерский</option>
+							</select>
+							<label class="popup__checkbox_main-label">
+								Кол-во комнат
+								<div class="popup__checkbox-block">
+									<label class="popup__checkbox_label">
+										<input type="checkbox" name="room1">
+										<span class="checkbox-span checkbox_span-green active">1</span>
+									</label>
+									<label class="popup__checkbox_label">
+										<input type="checkbox" name="room2">
+										<span class="checkbox-span checkbox_span-green active">2</span>
+									</label>
+									<label class="popup__checkbox_label">
+										<input type="checkbox" name="room3">
+										<span class="checkbox-span checkbox_span-green">3</span>
+									</label>
+									<label class="popup__checkbox_label">
+										<input type="checkbox" name="room4">
+										<span class="checkbox-span checkbox_span-green">4</span>
+									</label>
+									<label class="popup__checkbox_label">
+										<input type="checkbox" name="room5">
+										<span class="checkbox-span checkbox_span-green">5+</span>
+									</label>
+								</div>
+							</label>
+							<input type="text" name="name" placeholder="Как вас зовут?" class="popup__input">
+							<input type="text" name="email" placeholder="Email" class="popup__input">
+							<button class="btn button_primary popup__btn">Оставить заявку</button> 
+						</form>
+						<a href="#close" title="Close" class="popup__close"><img alt="close-popup" src="img/close-popup.png"></a>
+					</div>
+				</div>
+			</footer>
+
+
+			<link rel="stylesheet" href="css/main.min.css">
+			
+
+			<!-- jQuery library -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+			<!-- add slider plugin -->
+			<script src="js/slider-plugin.js"></script>
+
+			<!-- Latest compiled JavaScript -->
+			<script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+
+			<script src="js/common.min.js"></script>
+
+		</body>
+		</html>

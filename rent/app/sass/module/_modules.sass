@@ -1,0 +1,341 @@
+
+
+.page-header__center
+	
+	&__nav-log
+		display: flex
+		justify-content: space-between
+		&__nav
+			display: flex
+			align-items: center
+			justify-content: space-between
+			width: 51%
+
+			&__logo
+				margin-right: 10px
+			&__item
+				height: 82%
+				padding-top: 7px
+				color: #fff
+				&_clicked
+					border-bottom: 2px #fff solid
+				.dots
+					margin-right: 6px
+					position: relative
+					top: -3px
+					.fa-circle
+						font-size: 5px
+						padding-left: 1px
+						margin-right: 4px
+
+		&__log
+			display: flex
+			align-items: center
+			justify-content: space-between
+			width: 33%	
+			&__place-advert
+				color: #fff
+				background-color: lighten($accent, 3%)
+				padding: 12px 33px 12px 14px
+				border-radius: 4px
+				text-align: center
+				outline: none
+				white-space: nowrap
+				.fa-plus-circle
+					margin-right: 14px
+			&__log-in
+				align-self: flex-end
+				color: #fff
+				padding-bottom: 9px
+				border-bottom: 2px transparent solid
+			
+
+
+.main
+	
+	&__long-rent
+		font-weight: 600
+		font-size: 13px
+		&__path
+			margin-bottom: 21px
+			&__place::after
+				content: "/"
+				margin: 0px 6px
+				font-size: 16px
+			&__place:hover
+				text-decoration: none
+				color: #30AE63
+			&__place:last-child::after
+				content: ""	
+			&__to-main
+				display: none	
+		&__big-text
+			font-size: 19px
+			letter-spacing: -0.2px
+			margin-bottom: 17px
+		&__footer
+			display: flex
+			justify-content: space-between	
+			color: #8C9BA5
+			align-items: center
+			margin-bottom: 12px
+			&__settings
+				display: flex
+				background-color: #F2F3F4
+				.dropdown
+					background-color: #F2F3F4
+				.dropdown-toggle.btn-primary:focus
+					background-color: #fff
+					color: #000
+					border-color: #DFE3E6
+				.open > .dropdown-toggle.btn-primary
+					background-color: #fff
+					color: #000
+					border-color: #DFE3E6
+					&:focus
+						background-color: #fff
+						color: #000
+						border-color: #DFE3E6
+				&__item:first-child .btn	
+					padding-right: 36px
+				&__item:first-child .dropdown-menu
+					width: 84%	
+				.btn-primary
+					border-color: transparent
+				.btn 
+					font-size: 13px
+					padding: 7px 25px 8px 5px
+					color: #8C9BA5
+					margin-left: 22px
+					background-color: #F2F3F4
+					border-radius: 2px
+					font-weight: 600
+				.btn .caret
+					position: absolute
+					right: 5px
+					top: 15px
+					color: #8C9BA5
+					width: 9px
+
+				.dropdown-menu
+					margin: 0
+					margin-left: 22px
+					border: 0px transparent solid
+					border-radius: 0 0 4px 4px
+					padding: 0
+					width: 79%
+					min-width: 75px
+				.sort
+					min-width: 128px
+					>li>a
+						height: 37px
+						font-weight: 600
+						padding: 7px 25px 8px 5px
+					li a:hover
+						background-color: #30AE63
+						color: #FFF
+	&__variant
+		display: flex
+		padding: 12px 20px 20px 20px
+		font-weight: 600		
+		justify-content: space-between
+		background-color: #FFF
+		position: relative
+		margin-bottom: 10px
+		&__pic
+			margin-right: 11px
+		&__description
+			padding-top: 4px
+			max-width: 350px
+			&__address
+				font-size: 16px
+				letter-spacing: -0.65px
+				margin-bottom: 13px	
+			&__metro
+				font-size: 12px	
+				letter-spacing: -0.5px
+				font-weight: bold
+				margin-bottom: 26px
+				
+				.green-branch
+					color: $accent
+					font-size: 11px
+					margin-right: 7px
+				.blue-branch
+					color: #4A90E2
+					font-size: 11px
+					margin-right: 7px
+				span
+					margin-left: 18px
+					font-weight: 600
+					color: #9B9B9B
+			&__spec
+				font-size: 12px
+				letter-spacing: -0.5px
+				margin-bottom: 11px
+				color: #9B9B9B
+			&__details
+				font-size: 12px
+				color: #9B9B9B
+				margin-bottom: 19px
+				.fa	
+					vertical-align: middle
+					font-size: 4px
+					margin: 0px 6px	
+			&__info
+				font-size: 13px
+				letter-spacing: -0.5px
+				line-height: 20px
+		
+		&__aside
+			max-width: 155px
+			display: flex
+			flex-direction: row-reverse
+			flex-wrap: wrap
+			padding-top: 3px
+			margin-left: 74px
+			&__money
+				font-size: 15px
+				margin-bottom: 26px
+				color: #9B9B9B
+				&__price
+					font-size: 17px
+					padding-right: 4px
+					margin-bottom: 12px	
+					color: #000
+				&__usd
+					margin-right: 7px
+					margin-left: 11px
+				&__side
+					border-bottom: 2px green solid
+					padding-bottom: 3px	
+			&__buttons
+				display: flex
+				flex-wrap: wrap
+				max-width: 160px
+				flex-direction: row-reverse
+				justify-content: space-between
+				margin-bottom: 34px
+				
+											
+				&__phone, 
+				&__message
+					padding: 0px 28px	
+					height: 35px	
+					border-radius: 3px
+					background-color: #FFF
+				&__phone
+					border: 2px #ACDFC1 solid
+					.fa-phone
+						color: $accent
+						font-size: 16px 
+
+				&__message
+					border: 2px #A8C7EF solid 
+					padding: 0px 26px	
+
+					img
+						width: 18px
+						height: auto
+				&__info-button
+					padding: 0px 14px
+					border-radius: 3px
+					font-size: 13px
+					letter-spacing: -0.5px
+					height: 36px
+					margin-bottom: 18px
+					.fa-info-circle
+						color: #D8D8D8
+						font-size: 18px
+						padding-left: 18px
+				.high-price
+					color: #ED908D
+					background-color: #FFEFEA
+					padding: 0px 18px
+				.good-price
+					background-color: #EAFFF5
+					color: $accent
+					padding: 0px 16px
+			&__next
+				font-size: 12px
+				position: relative
+				cursor: pointer
+				span
+					color: #9B9B9B
+					a
+						padding-left: 8px	
+				h6
+					margin-top: 7px	
+		&__dots
+			position: absolute
+			bottom: 29px
+			text-align: center
+			width: 100%
+			left: 0
+			.fa-circle				 										
+				font-size: 9px
+				margin: 0px 3px
+				color: rgba(#000000, .6)
+			.circle-gray
+				color: #D8D8D8
+
+
+.page-footer	
+	display: flex
+	justify-content: space-between
+	position: relative
+	padding-top: 34px
+	padding-bottom: 152px
+	font-weight: 600
+	&__metrovka,
+	&__partnership,
+	&__know-more,
+	&__contacts
+		font-size: 15px
+		&__name	
+			margin-bottom: 21px
+		&__item
+			display: block
+			margin-bottom: 16px
+			line-height: 1.6
+			font-size: 13px
+			color: $dark
+	&__metrovka
+		max-width: 158px
+	&__partnership
+		max-width: 155px	
+	&__know-more
+		max-width: 155px	
+	&__contacts
+		flex-basis: 202px
+		&__item
+			margin-bottom: 5px
+			line-height: 1.8
+			letter-spacing: -0.5px
+			&_special-margin
+				margin-bottom: 14px
+			span
+				font-size: 11px
+				letter-spacing: 0
+			&__icon:hover
+				text-decoration: none
+			.fa
+				font-size: 20px
+			&__icon	
+				margin-right: 17px
+		&__button
+			padding: 12px 0px
+			display: block
+			text-align: center
+			line-height: 1.2
+			width: 80%
+			margin-top: 14px
+			letter-spacing: -1.2px
+			font-weight: normal
+			border: 2px transparent solid
+	&__logo
+		position: absolute		
+		display: block
+		bottom: 56px
+		text-align: center
+		width: 100%

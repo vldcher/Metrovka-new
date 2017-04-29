@@ -1,0 +1,301 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 889px)
+	/**/
+	.page-header
+		&__center
+			padding-left: 15px
+			padding-right: 15px
+			&__form
+				flex-wrap: wrap
+				flex-direction: row-reverse
+				max-width: 850px
+				&__submit
+					margin-top: 30px
+					margin-left: 123px
+				&__room
+					order: -1
+			&__nav-log
+				&__log
+					margin-right: 80px
+					&__place-advert
+						margin-right: 15px
+	.main
+		&__property
+			justify-content: center
+			margin-bottom: 21px
+			flex-wrap: wrap
+			padding: 41px 80px
+			&__content
+				&__place-type
+					padding: 0
+					justify-content: space-around
+			&__pic
+				order: -1
+				padding: 0
+				margin: 0 35px
+				margin-bottom: 30px
+				text-align: center
+				&__metro
+					max-width: 315px
+		&__best
+			&__big-text
+				padding-left: 15px
+				padding-right: 15px
+			&__slider
+				&__item
+					margin-right: 10px
+		&__advert
+			&__big-text
+				padding-left: 15px
+				padding-right: 15px
+			&__slider
+				&__item
+					margin-right: 10px			
+		&__social
+			&__slider
+				margin-bottom: 83px
+				justify-content: initial
+				&__item	
+					&__phone
+						display: none
+					&__telegram
+						margin: 0 auto
+						max-width: 437px
+						max-height: 447px	
+						padding-bottom: 30px	
+		&__blog
+			&__slider
+				padding: 0px 15px
+				flex-wrap: wrap
+				justify-content: space-around
+				max-width: 800px
+				&__item
+					border-bottom: 2px #E8E8E8 solid
+					margin-bottom: 20px
+					&__author
+						margin-bottom: 15px
+
+	.page-footer
+		flex-wrap: wrap
+		justify-content: space-around
+		max-width: 650px
+		&__metrovka,
+		&__partnership,
+		&__know-more,
+		&__contacts
+			margin-bottom: 40px
+
+	.popup
+		flex-direction: column
+		top: calc(50% - 366px)
+		left: calc(50% - 200px)
+		max-width: 400px
+		&__input,
+		&__select,
+		&__btn
+				width: 85%
+				max-width: 350px
+
+
+		&__btn
+				padding: 5px
+
+
+		&__close
+				order: -1
+				background-color: #F5F7FA
+				padding-left: 90%
+
+
+		
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 700px)
+	/**/
+	.page-header
+		&__center
+			&__big-text
+				line-height: 1.5
+			&__form
+				flex-direction: row
+				&__select-city
+					margin-bottom: 15px
+				&__select-city,
+				&__room
+					margin-right: 185px
+				&__room
+					order: 0
+				&__submit
+					margin-left: 0
+			&__nav-log
+				&__log
+					width: 20%
+					margin-left: 15px
+					margin-right: 12px
+					&__log-in
+						padding-bottom: 12px
+				
+					&__place-advert
+						padding: 0
+						margin: 0
+						background-color: transparent
+						.fa
+							margin: 0
+							font-size: 20px
+						b
+							display: none
+				&__nav
+					width: 85%
+					&__item
+						margin-left: 15px
+						.dots
+							.fa
+								margin-right: 1px
+						
+							
+					
+						
+	.main
+		&__social
+			&__small-text
+				max-width: 437px
+			&__option
+				justify-content: space-around
+				max-width: 437px
+				margin: 0 auto 41px
+				&__item
+					margin: 0
+			&__slider
+				justify-content: space-around
+				margin-bottom: 83px
+				&__telegram
+					padding-bottom: 30px	
+		&__blog
+			&__slider
+				&__item
+					margin: 0 10px 20px
+				
+	.page-footer
+		max-width: 400px
+		&__know-more
+			padding-left: 9px
+		&__contacts
+			padding-left: 40px
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+
+	.page-header__center
+		&__nav-log
+			margin-bottom: 15px
+			&__nav
+				&__item:not(:first-child)
+					display: none
+			&__log
+				&__place-advert
+					display: none
+				&__log-in
+					display: none
+				&__hamburger
+					// hidden: false
+					&__hamburger-box
+						&__hamburger-inner
+
+				
+				
+	.main
+		&__best
+			&__big-text
+				line-height: 1.5
+		&__advert
+			&__big-text
+				line-height: 1.5	
+				margin-bottom: 20px	
+		&__social
+			&__small-text
+				max-width: 335px
+			&__slider
+				&__telegram
+					padding-right: 35px
+					padding-left: 15px
+				&__flags
+					bottom: -51px	
+		&__blog
+			&__small-text
+				max-width: 300px
+	.page-footer
+		max-width: 200px
+		&__metrovka,
+		&__partnership,
+		&__know-more,
+		&__contacts
+			margin-bottom: 40px
+			padding: 0
+			text-align: center
+		&__contacts
+			&__button
+				margin: 14px auto 0	
+				
+	.openMenu-link
+			display: inherit
+			margin-right: 15px
+			padding-top: 5px
+		
+		
+	#openMenu:target
+			display: inherit
+			padding-top: 25px
+			padding-left: 20px
+		
+	.closeMenu-link
+		margin-left: calc(100% - 348px)
+		margin-top: 22px
+			
+	.menu__container
+		display: flex
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+

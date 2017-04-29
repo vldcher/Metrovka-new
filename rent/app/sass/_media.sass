@@ -1,0 +1,349 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+@media only screen and (min-width : 1200px)
+	.main__wrapper__map
+		max-width: 430px
+		overflow: hidden
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.page-header__center, .main
+		margin-left: 30px
+	.main__wrapper__map
+		max-width: 240px
+		overflow: hidden
+
+@media only screen and (min-width : 889px)
+	.page-header__center, .main
+		margin-left: 30px
+	
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 889px)
+	/**/
+	.page-header__center
+
+		&__nav-log
+			&__nav
+				width: 44%
+				margin-left: 20px
+				&__logo
+					margin-right: 10px
+				&__item
+					height: 82%
+					padding-top: 7px
+					margin-left: 20px
+					span
+						display: none
+					
+					.dots
+						margin-right: 6px
+						position: relative
+						top: -3px
+						.fa-circle
+							font-size: 5px
+							padding-left: 1px
+							margin-right: 4px
+
+			&__log
+				width: 36%
+				margin-right: 20px	
+				&__place-advert
+					padding: 11px 7px 11px 7px
+					.fa-plus-circle
+						margin-right: 14px
+				&__log-in
+					align-self: flex-end
+					padding-bottom: 9px
+					border-bottom: 2px transparent solid
+	.main
+		
+		&__long-rent
+			
+			&__path
+				margin-bottom: 21px
+				margin-left: 20px
+				
+			&__big-text
+				font-size: 19px
+				letter-spacing: -0.2px
+				margin-bottom: 17px
+				margin-left: 20px
+			&__footer
+				display: flex
+				justify-content: space-between	
+				color: #8C9BA5
+				align-items: center
+				margin-bottom: 12px
+				margin-left: 20px
+				&__settings
+					display: flex
+					background-color: #F2F3F4
+					margin-right: 20px
+					
+					
+		&__variant
+			display: flex
+			padding: 12px 20px 20px 20px
+			font-weight: 600		
+			justify-content: space-between
+			flex-wrap: wrap
+			
+			&__pic
+				margin-right: 11px
+				order: 0
+			&__description
+				
+				order: 0
+				&__address
+						
+			
+			&__aside
+				max-width: 155px
+				display: flex
+				flex-direction: column
+				flex-wrap: wrap
+				padding-top: 3px
+				margin-left: 0px
+		&__wrapper
+			&__map
+				display: none		
+	.page-footer
+		margin-left: 20px								
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 700px)
+	.page-header__center
+
+		&__nav-log
+			&__nav
+				width: 44%
+				margin-left: 20px
+				&__logo
+					margin-right: 10px
+				&__item:not(:first-child)
+						display: none
+			&__log
+				&__place-advert
+					display: none
+				
+				&__log-in
+					display: none
+	.main
+		
+		&__long-rent
+			
+			&__path
+				margin-bottom: 21px
+				margin-left: 20px
+				
+			&__big-text
+				font-size: 19px
+				letter-spacing: -0.2px
+				margin-bottom: 17px
+				margin-left: 20px
+			&__footer
+				display: flex
+				justify-content: space-between	
+				color: #8C9BA5
+				align-items: center
+				margin-bottom: 12px
+				margin-left: 20px
+				&__settings
+					display: flex
+					background-color: #F2F3F4
+					margin-right: 20px
+					
+					
+		&__variant
+			display: flex
+			padding: 12px 20px 20px 20px
+			font-weight: 600		
+			justify-content: space-around
+			flex-wrap: wrap
+			
+			&__pic
+				margin-right: 11px
+				order: 0
+				img
+					min-width: 400px
+
+			&__description
+				order: 0
+				min-width: 410px
+				&__address
+						
+			
+			&__aside
+				min-width: 371px
+				display: flex
+				flex-direction: row
+				flex-wrap: wrap
+				padding-top: 3px
+				margin-left: 0px
+				justify-content: space-between
+				&__buttons
+					margin-left: 20px
+	.page-footer	
+		display: flex
+		justify-content: space-around
+		position: relative
+		padding-top: 34px
+		padding-bottom: 152px
+		font-weight: 600
+		flex-wrap: wrap
+		&__metrovka,
+		&__partnership,
+		&__know-more,
+		&__contacts
+			min-width: 150px
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+	.page-header__center
+
+		&__nav-log
+			&__nav
+				width: 44%
+				margin-left: 20px
+				&__logo
+					margin-right: 10px
+				&__item:not(:first-child)
+						display: none
+			&__log
+				&__place-advert
+					display: none
+				
+				&__log-in
+					display: none
+	.main
+		
+		&__long-rent
+			
+			&__path
+				margin-bottom: 21px
+				margin-left: 20px
+				
+			&__big-text
+				font-size: 14px
+				letter-spacing: -0.2px
+				margin-bottom: 17px
+				margin-left: 20px
+			&__footer
+				display: flex
+				justify-content: flex-start
+				flex-wrap: wrap	
+				
+				&__settings
+					display: flex
+					background-color: #F2F3F4
+					margin-right: 20px
+
+					&__item:first-child .btn
+						padding-right: 40px
+					.btn
+						margin-left: -6px
+
+
+
+
+					
+					
+		&__variant
+			display: flex
+			padding: 12px 20px 20px 20px
+			font-weight: 600		
+			justify-content: space-around
+			flex-wrap: wrap
+			
+			&__pic
+				margin-right: 0px
+				order: 0
+				img
+					min-width: 290px
+
+			&__description
+				order: 0
+				min-width: 210px
+				&__address
+						
+			
+			&__aside
+				min-width: 282px
+				display: flex
+				flex-direction: row
+				flex-wrap: wrap
+				padding-top: 3px
+				margin-left: 0px
+				justify-content: space-between
+				&__buttons
+					margin-left: 0px
+					min-width: 280px
+					display: flex
+					flex-direction: row
+					justify-content: space-between
+					&__message, &__phone
+						padding: 0 21px
+					.high-price, .good-price
+						padding: 0 10px
+				&__money
+					display: flex
+					margin-top: 6px
+					&__price
+						margin-right: 16px
+					&__side
+						display: none
+	.page-footer	
+		display: flex
+		justify-content: space-around
+		position: relative
+		padding-top: 34px
+		padding-bottom: 152px
+		font-weight: 600
+		flex-wrap: wrap
+		text-align: center
+		&__metrovka,
+		&__partnership,
+		&__know-more,
+		&__contacts
+			min-width: 170px
+		&__contacts
+			&__button
+				margin-left: 14px
+
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
