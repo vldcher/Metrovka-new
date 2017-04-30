@@ -9,4 +9,5 @@ $(function(){
 																	 	 slidesToScroll: 1, 
 																	   arrows: true, 
 																	   autoplay: true});
+	$(".main__social__slider").slider({bgColorIndex:"#30ae63"});
 });
