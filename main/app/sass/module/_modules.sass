@@ -431,12 +431,17 @@
 				align-self: flex-end
 				border-bottom: 2px transparent solid
 		&__slider	
-			margin-bottom: 113px
+			padding-bottom: 113px
 			position: relative
+			overflow: hidden
+			margin: 0 auto
+			display: -webkit-box
 			&__item
 				display: flex
 				justify-content: space-between
 				position: relative
+				margin-right: 45px
+				transition: margin-left 1s linear
 				&__phone
 					margin-left: 78px
 					margin-right: 91px
@@ -444,6 +449,8 @@
 					padding: 52px 74px 0px 41px
 					background-color: #FFF
 					margin: 63px 2px 65px auto
+					max-width: 420px
+					min-width: 410px
 					ol
 						list-style-type: decimal
 					&__name
@@ -462,7 +469,7 @@
 						&__item
 							margin-bottom: 13px
 							line-height: 1.5
-							font-size: 13px
+							font-size: 13px	
 					&__join
 						display: block
 						padding: 12px 0px
@@ -472,16 +479,18 @@
 			&__flags	
 				position: absolute
 				width: 100%
-				bottom: -57px	
+				bottom: 40px	
+				left: 0
 				text-align: center	
 				.fa 
-					background-color: transparent
 					color: transparent	
 					border: 2px #30ae63 solid
 					border-radius: 50%
 					margin: 0 3px
 					padding: 0 1px
-
+					overflow: hidden
+					&:first-child
+						background-color: #30AE63
 	&__blog
 		background: #FFF
 		font-weight: 600
