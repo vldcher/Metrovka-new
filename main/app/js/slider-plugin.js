@@ -37,6 +37,7 @@
 		  		showSlides = config.showSlides,
 		  		timesScrolled = 0,
 		  		bgColorIndex = config.bgColorIndex,
+		  		sliderTransition = $sliderFirstItem.css("transition"),
 		  		itemPosition = 0; 
 		   
 		  $slider.css("max-width", ($sliderFirstItem.width() + sliderItemMarginRight)*showSlides-sliderItemMarginRight);
@@ -51,6 +52,18 @@
 		  	$sliderNavRight.hide();
 		  };
 
+		  //index positioning at the init
+		  itemPosition = -config.index*step; 
+		  timesScrolled = config.index;
+		  $sliderFirstItem.css("margin-left", itemPosition + "px");
+		  for (var i = 0; i < $sliderItems.length - 2; i++) {
+		  		if (i === timesScrolled){
+		  			$($sliderIndex.children()[i]).css('background-color',bgColorIndex);
+		  		}else{	
+		 				$($sliderIndex.children()[i]).css('background-color','white');
+		 			};
+		 	};
+		 			
 		  var slideNext = function() {
 		  	if (itemPosition <= -($sliderItems.length - 2 - showSlides)*$sliderFirstItem.width()){
 				  itemPosition = 0;
@@ -125,6 +138,45 @@
 		  $sliderNavRight.click(function(e){	
 		  	slideNext();
 		  });
+		  
+		  for (var i = 0; i < $sliderItems.length - 2; i++) {
+		  	var startingX;
+		  	var change;
+		  	$($sliderItems[i]).on("touchstart", function(e){
+		  		startingX = e.touches[0].clientX;
+		  		clearInterval(autoplay);
+		  		console.log(startingX);
+		  	});
+		  	$($sliderItems[i]).on("touchmove", function(e){
+		  		var touch = e.touches[0];
+		  		change = startingX - touch.clientX;
+		  		console.log(change);
+		  		$sliderFirstItem.css("transition", "none");
+		  		$sliderFirstItem.css("margin-left", itemPosition - change + "px");
+		  	});
+		  	$($sliderItems[i]).on("touchend", function(e){
+		  		$sliderFirstItem.css("transition", sliderTransition);
+			  	if (change >= 0) {	
+			  		if (change%(step/slidesToScroll) >= (step/slidesToScroll)*0.5){
+			  			$sliderFirstItem.css("margin-left", itemPosition - change - (step/slidesToScroll) + change%(step/slidesToScroll) + "px");
+			  			itemPosition = itemPosition - change - (step/slidesToScroll) + change%(step/slidesToScroll);
+			  		}else if (change%(step/slidesToScroll) <= (step/slidesToScroll)*0.5){
+			  			$sliderFirstItem.css("margin-left", itemPosition - change + change%(step/slidesToScroll) + "px");
+			  			itemPosition = itemPosition - change + change%(step/slidesToScroll);
+			  		};
+		  		} else if (change < 0){
+		  			if ((-change)%(step/slidesToScroll) >= (step/slidesToScroll)*0.5){
+			  			$sliderFirstItem.css("margin-left", itemPosition - change + (step/slidesToScroll) - (-change)%(step/slidesToScroll) + "px");
+			  			itemPosition = itemPosition - change + (step/slidesToScroll) - (-change)%(step/slidesToScroll); 
+			  		}else if ((-change)%(step/slidesToScroll) <= (step/slidesToScroll)*0.5){
+			  			$sliderFirstItem.css("margin-left", itemPosition - change - (-change)%(step/slidesToScroll) + "px");
+			  			itemPosition = itemPosition - change - (-change)%(step/slidesToScroll);
+			  		};
+		  		};
+		  		
+		  	});
+		  };
+		
 		};
 
 		jfirst.init();	
